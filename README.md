@@ -1,5 +1,5 @@
 # Tubes-PBO-Pygame
-# Tubes-PythonPbo
+
 ### INITIATION ###
 ## Story ##
 
@@ -39,4 +39,4 @@ Dekstop game.
                         kali ini ayam tidak mau di serang tikus , karena ayam tidak mau kalah sama tikus-tikus.
 
 1.6 Gameplay		: untuk membantu ayam agar tidak terus-terusan di serang sarangnya oleh tikus-tikus,
-                    dengan cara ayam menembak tikus agar tikus tidak menyerang sarangnya. Hanya saja, bentuk pertahana tikus menyerang sarang dari kucing secara banyakan (bergolongan). Permainan perlu berstrategi dalam menembak karakter tikus agar tikus tidak menerobos masuk menyerang sarang dari kucing.
+                    dengan cara ayam menembak tikus agar tikus tidak menyerang sarangnya. Hanya saja, bentuk pertahana tikus menyerang sarang dari ayam secara banyakan (bergolongan). Permainan perlu berstrategi dalam menembak karakter tikus agar tikus tidak menerobos masuk menyerang sarang dari ayam.
