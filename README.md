@@ -24,6 +24,7 @@ Karakter pada game ini memiliki suasana yang menegangkan seperti nanti kita akan
 Dekstop game.
 
 ### PRE-PRODUCTION ###
+
 1.1 High concept	 	: game ini mendeskripsikan tentang seekor ayam yang melindungi anaknya dalam sarangnya dari 
                         serangan musuh atau tikus-tikus yang akan menerjang masuk ke sarang ayam, jika tikus menerjang kesarang ayam maka ayam akan menembak dengan senjatanya.
 
