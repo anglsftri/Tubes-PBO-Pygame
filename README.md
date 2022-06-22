@@ -1,10 +1,10 @@
-## PEMOGRAMAN BERORIENTASI OBJEK ##
+# PEMOGRAMAN BERORIENTASI OBJEK #
 
 ### Dibuat oleh: ###
 ### ANGEL SAFITRI (2105033) - RPL 1B ###
 ### RIRIN RAHAYU (2105056) - RPL 1B ###
 
-# Tubes-PBO-Pygame
+# Tubes-PBO-Pygame #
 
 ### INITIATION ###
 ## Story ##
