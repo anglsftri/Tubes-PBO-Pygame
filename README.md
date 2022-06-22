@@ -1,6 +1,6 @@
 # PEMOGRAMAN BERORIENTASI OBJEK #
 
-Dibuat oleh:
+#### Dibuat oleh: ####
 ANGEL SAFITRI (2105033) - RPL 1B 
 RIRIN RAHAYU (2105056) - RPL 1B 
 
