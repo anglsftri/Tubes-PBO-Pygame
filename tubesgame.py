@@ -145,3 +145,99 @@ while(running):
                 print("Score: {}".format(score))
             index_arrow += 1
         index += 1
+# gambar musuh ke layar
+    for enemy in enemies:
+        screen.blit(enemy_img, enemy)
+        
+    # 6.3 - Draw Health bar
+    screen.blit(healthbar, (5,5))
+    for hp in range(health_point):
+        screen.blit(health, (hp+8, 8))
+
+    # 6.4 - Draw clock
+    font = pygame.font.Font(None, 24)
+    minutes = int((countdown_timer-pygame.time.get_ticks())/60000) # 60000 itu sama dengan 60 detik
+    seconds = int((countdown_timer-pygame.time.get_ticks())/1000%60)
+    time_text = "{:02}:{:02}".format(minutes, seconds)
+    clock = font.render(time_text, True, (255,255,255))
+    textRect = clock.get_rect()
+    textRect.topright = [635, 5]
+    screen.blit(clock, textRect)
+            
+    # 7 - Update the sceeen ~~~~~~~~~~~
+    pygame.display.flip()
+
+    # 8 - Event Loop ~~~~~~~~~~~~~~
+    for event in pygame.event.get():
+        # event saat tombol exit diklik
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit(0)
+            
+        # Fire!!
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            arrows.append([angle, new_playerpos[0]+32, new_playerpos[1]+32])
+            shoot_sound.play()
+            
+         # chek the keydown and keyup
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_w:
+                keys["top"] = True
+            elif event.key == K_a:
+                keys["left"] = True
+            elif event.key == K_s:
+                keys["bottom"] = True
+            elif event.key == K_d:
+                keys["right"] = True
+        if event.type == pygame.KEYUP:
+            if event.key == K_w:
+                keys["top"] = False
+            elif event.key == K_a:
+                keys["left"] = False
+            elif event.key == K_s:
+                keys["bottom"] = False
+            elif event.key == K_d:
+                keys["right"] = False
+    # - End of event loop ~~~~~~~~~~~~~~
+
+    # 9. Move the player ~~~~~~~~~~~~~
+    if keys["top"]:
+        playerpos[1] -= 5 # kurangi nilai y
+    elif keys["bottom"]:
+        playerpos[1] += 5 # tambah nilai y 
+    if keys["left"]:
+        playerpos[0] -= 5 # kurangi nilai x
+    elif keys["right"]:
+        playerpos[0] += 5 # tambah nilai x
+        
+    # 10 - Win/Lose check ~~~~~~~~~~~~~
+    if pygame.time.get_ticks() > countdown_timer:
+        running = False
+        exitcode = EXIT_CODE_WIN
+    if health_point <= 0:
+        running = False
+        exitcode = EXIT_CODE_GAME_OVER
+
+# - End of Game Loop ~~~~~~~~~~~~~~~
+
+
+
+# 11 - Win/lose display ~~~~~~~~~~~~~~
+if exitcode == EXIT_CODE_GAME_OVER:
+    screen.blit(gameover, (0, 0))
+else:
+    screen.blit(youwin, (0, 0))
+
+# Tampilkan score
+text = font.render("Score: {}".format(score), True, (255, 255, 255))
+textRect = text.get_rect()
+textRect.centerx = screen.get_rect().centerx
+textRect.centery = screen.get_rect().centery + 24
+screen.blit(text, textRect)
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit(0)
+    pygame.display.flip()
