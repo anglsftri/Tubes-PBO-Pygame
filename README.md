@@ -27,7 +27,7 @@ Pada game ini memiliki aksi berjalan maju, mundur,kanan,kiri, berputar dan menem
 Karakter pada game ini memiliki suasana yang menegangkan seperti nanti kita akan memasuakan, musik yang bersemangat dan efek yang memaku.
 
 ## Teknologi ##
-Dekstop game.
+Window game.
 
 ### PRE-PRODUCTION ###
 
